@@ -18,7 +18,7 @@ export default function TambahBerita(){
     const id = berita.length
 
     useEffect(() => {
-    axios.get('https://sheetdb.io/api/v1/fkijxoik54rl1')
+    axios.get('https://sheetdb.io/api/v1/d7gsiznuemgk2')
     .then(response => {
         setBerita(response.data)
     })
