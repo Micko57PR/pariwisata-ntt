@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dd-color{
+  background-color: red;
+  color: white;
+}
+
+sticky
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.btn-bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 425px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.top-right{
+  position: absolute;
+  bottom: 8px;
+  right: 275px;
+}
+
+.card-img-tops {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+}
+
