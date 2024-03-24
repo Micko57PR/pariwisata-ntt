@@ -47,13 +47,3 @@ code {
   height: 30vw;
   object-fit: cover;
 }
-
-.active{
-  background-color: red;
-  color: white;
-}
-
-.normal{
-  background-color: white;
-  color:black;
-}
