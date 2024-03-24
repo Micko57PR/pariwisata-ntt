@@ -17,7 +17,7 @@ export default function Home() {
 	},[])
 
 	useEffect(() => {
-		axios.get('https://api.sheety.co/9cac24de8b1458fc4bb1ce50268083e5/databaseWisata/sheet1')
+		axios.get('https://api.sheety.co/ca8c3dbf07a7f25c4580d99a5bb63100/databaseWisata/sheet1')
 		.then(response => {
 			const data = response.data.sheet1
 			const utamas = Object.values(data)

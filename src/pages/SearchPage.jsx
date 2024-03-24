@@ -18,7 +18,7 @@ export default function SearchPage(){
         setBerita(filters)
 		})
 
-    axios.get('https://api.sheety.co/d5c1b9f9f0400d6b49ecf702f01bad92/databaseWisata/sheet1')
+    axios.get('https://api.sheety.co/ca8c3dbf07a7f25c4580d99a5bb63100/databaseWisata/sheet1')
     .then(response => {
           const data = response.data.sheet1
           const datas = Object.values(data)
