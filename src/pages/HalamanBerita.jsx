@@ -10,12 +10,13 @@ const [allberita, setAllberita] = useState([])
 const [prevberita, setPrevberita] = useState(null)
 const [nextberita, setNextberita] = useState(null)
 
+console.log(berita)
 useEffect(() => {
 axios.get('https://sheetdb.io/api/v1/d7gsiznuemgk2')
 .then(response => {
     const data = response.data
     const datas = Object.values(data)
-    const item = datas.filter(dataa => dataa.id.includes(id));
+    const item = datas.filter(dataa => dataa.id == id);
     const prev = datas.map(dataa => dataa.id)
     setBerita(item)
     const cekindex = prev.findIndex(checkIndex);
