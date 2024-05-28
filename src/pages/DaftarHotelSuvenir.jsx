@@ -2,22 +2,27 @@ import { useParams } from "react-router-dom"
 import axios from "axios"
 import { useState, useEffect } from "react"
 import CardHotel from "../component/CardHotel"
+import { Link } from "react-router-dom";
 
 export default function DaftarHotelSuvenir() {
 const {lokasi} = useParams()
 const [filter, setFilter] = useState('')
 const [search, setSearch] = useState('')
 const [hotelSuvenir, setHotelSuvenir] = useState([])
+const [hotelSuvenirAll, setHotelSuvenirAll] = useState([])
 
 useEffect(() => {
 axios.get('https://api.sheety.co/d5c1b9f9f0400d6b49ecf702f01bad92/hotel&suvenirNtt/sheet1')
 .then(response => {
   const data = response.data.sheet1
   const datas = Object.values(data)
-  const hotelSuvenirLokasi = datas.filter(dataa => dataa.lokasi == lokasi)
+  const hotelSuvenirLokasi = datas.filter(dataa => dataa.lokasi == lokasi && dataa.populer == 1)
+  const hotelSuvenirAllLokasi = datas.filter(dataa => dataa.lokasi == lokasi)
   setHotelSuvenir(hotelSuvenirLokasi)  
+  setHotelSuvenirAll(hotelSuvenirAllLokasi)
 })
 },[])
+console.log('lokasi:',hotelSuvenir)
 
     return(
         <>
@@ -85,9 +90,33 @@ axios.get('https://api.sheety.co/d5c1b9f9f0400d6b49ecf702f01bad92/hotel&suvenirN
         <option value="TTU">Kabupaten Timor Tengah Utara</option>
         </select> */}
 
-        <div className="row mt-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-5">
-        { hotelSuvenir.populer == 1 ? <>
-        <CardHotel data={hotelSuvenir}/></>:null}
+        <div className="mt-5">
+        { hotelSuvenir ? <>
+        <CardHotel data={hotelSuvenir}/></>:<><p className="text-capitalize text-center fw-bold">Daftar Kosong</p></>}
+        </div>
+        <div className="mt-5">
+        <table class="table">
+  <thead className="text-left">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Hotel</th>
+      <th scope="col">Alamat</th>
+      <th scope="col">No Telfon</th>
+      <th scope="col">Google Maps</th>
+    </tr>
+  </thead>
+    <tbody className="text-left">
+    {hotelSuvenirAll.map((item, i) => ( 
+      <tr>
+        <th scope="row">{i+1}</th>
+        <td>{item.hotel}</td>
+        <td>{item.alamat}</td>
+        <td>{item.noTlp}</td>
+        <td><Link key={i} to={`${item.googleMaps}`} target="blank">Lihat Maps</Link></td>
+      </tr>
+    ))}
+    </tbody>
+  </table>
         </div>
         </div>
         </div>

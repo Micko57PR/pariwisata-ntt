@@ -24,6 +24,10 @@ code {
   max-height: 30vh;
 }
 
+.cardsimage{
+width: 25px;
+}
+
 .bottom-left {
   position: absolute;
   bottom: 8px;

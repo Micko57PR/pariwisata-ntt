@@ -11,15 +11,15 @@ export default function HotelSuvenir() {
         let navigate = useNavigate();
         const [hotelSuvenir, setHotelSuvenir] = useState([])
         
-        useEffect(() => {
-        axios.get('https://api.sheety.co/d5c1b9f9f0400d6b49ecf702f01bad92/hotel&suvenirNtt/sheet1')
-        .then(response => {
-          const data = response.data.sheet1
-          const datas = Object.values(data)
-          const hotelSuvenir = datas.filter(dataa => dataa.lokasi == lokasi)
-          setHotelSuvenir(hotelSuvenir)  
-        })
-        },[])
+        // useEffect(() => {
+        // axios.get('https://api.sheety.co/d5c1b9f9f0400d6b49ecf702f01bad92/hotel&suvenirNtt/sheet1')
+        // .then(response => {
+        //   const data = response.data.sheet1
+        //   const datas = Object.values(data)
+        //   const hotelSuvenir = datas.filter(dataa => dataa.lokasi == lokasi)
+        //   setHotelSuvenir(hotelSuvenir)  
+        // })
+        // },[])
 
         
             return(
@@ -55,7 +55,7 @@ export default function HotelSuvenir() {
                 <option value="TTU">Kabupaten Timor Tengah Utara</option>
                 </select>
 
-                <button className="btn btn-primary rounded-pill" onClick={() => navigate(`/DaftarHotelSuvenir/${lokasi}`)}>Lanjut</button>
+                <button className="btn btn-primary rounded-pill mt-3" onClick={() => navigate(`/hotel-suvenir/${lokasi}`)}>Lanjut</button>
         
 
                 </div>
