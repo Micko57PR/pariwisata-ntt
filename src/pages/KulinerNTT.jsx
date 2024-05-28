@@ -27,7 +27,7 @@ export default function KulinerNTT(){
         <div className="section m-3 p-3">
         <div className="container">
             <h3 className="mt-3 mb-5 fw-bold">Kuliner</h3>
-            <div className="row mt-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-5">
+            <div className="row mt-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-3 g-1">
                 <CardCulinary data={currentData}/>
                 </div>
                 <center>
