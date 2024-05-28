@@ -21,7 +21,7 @@ export default function WisataPage(){
     axios.get('https://api.sheety.co/ca8c3dbf07a7f25c4580d99a5bb63100/databaseWisata/sheet1')
     .then(response => {
     const data = response.data.sheet1
-    // const datas = Object.values(data)
+    const datas = Object.values(data)
     const item = data.filter(data => data.id == id);
     setWisata(item[0])
     setLatitude(item[0].latitude)
@@ -57,11 +57,12 @@ export default function WisataPage(){
     <p class="text-justify mt-3">{wisata.deskripsi}</p>
     </div>
     <div className="col">
-    <h5 className="fw-bold text right">Jalur Transportasi:</h5>
+    <h4 className="fw-bold text right">Alamat/Lokasi:</h4><p>{wisata.alamat}</p>
+    <h4 className="fw-bold text right">Jalur Transportasi:</h4>
     <ul className="text-right">
-    {wisata.udara == 1 ? <><li>Transportasi Udara</li> <h5>{wisata.jalur_udara}</h5></>:null}
-    {wisata.laut == 1 ? <><li>Transportasi Laut</li></>:null}
-    {wisata.darat == 1 ? <><li>Transportasi Darat</li></>:null}
+    {wisata.udara == 1 ? <><li><h5 className="fw-bold text right">Transportasi Udara:</h5><p>{wisata.jalurUdara}</p></li></>:null}
+    {wisata.laut == 1 ? <><li><h5 className="fw-bold text right">Transportasi Laut:</h5><p>{wisata.jalurLaut}</p></li></>:null}
+    {wisata.darat == 1 ? <><li><h5 className="fw-bold text right">Transportasi Darat:</h5><p>{wisata.jalurDarat}</p></li></>:null}
     </ul>
     <h5 className="fw-bold text right mt-4">Fasilitas:</h5>
     <p className="text-capitalize">{wisata.fasilitas}</p>
@@ -85,8 +86,9 @@ export default function WisataPage(){
     </MapContainer>
     </> : null
     }
+    <Link to={`/wisata/`} style={{fontSize:'15px'}} class="text-justify mt-3" >Kembali Ke Daftar Wisata</Link>
         </div>
-        <Link to={`/wisata/`} style={{fontSize:'12px'}} class="text-align-justify mt-3" >Kembali Ke Daftar Wisata</Link>
+        
         
         
         </section>

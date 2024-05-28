@@ -9,6 +9,14 @@ import WisataKategori from "../pages/WisataKategori"
 import WisataPage from "../pages/WisataPage"
 import SearchPage from "../pages/SearchPage"
 import Berita from "../pages/Berita"
+import KulinerNTT from "../pages/KulinerNTT"
+import HalamanKuliner from "../pages/HalamanKuliner"
+import HotelSuvenir from "../pages/HotelSuvenir"
+import DaftarHotelSuvenir from "../pages/DaftarHotelSuvenir"
+
+// import Event from "../pages/Event"
+
+
 
 export default function RoutesIndex(){
 	
@@ -25,6 +33,12 @@ export default function RoutesIndex(){
 	<Route path="/wisata/:id" element={<WisataPage/>}/>
 	<Route path="/search/" element={<SearchPage/>}/>
 	<Route path="/berita/" element={<Berita/>} />
+	<Route path="/kulinerNTT/" element={<KulinerNTT/>} />
+	<Route path="/kulinerNTT/:id" element={<HalamanKuliner/>}/>
+	<Route path="/hotel-suvenir/" element={<HotelSuvenir/>} />
+	<Route path="/hotel-suvenir/:lokasi" element={<DaftarHotelSuvenir/>}/>
+	
+	{/* <Route path="/event/" element={<Event/>} /> */}
 	</Routes>
 	</>
 	)

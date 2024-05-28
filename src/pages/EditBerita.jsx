@@ -25,7 +25,7 @@ useEffect(() => {
     .then(response => {
         const data = response.data
         const datas = Object.values(data)
-        const item = datas.filter(dataa => dataa.id == id);
+        const item = datas.filter(dataa => dataa.id.includes(id));
         setBerita(item)
         setPar1(item[0].par1)
         setPar2(item[0].par2)
@@ -53,6 +53,7 @@ const Edit = () =>{
         navigate("/tambah-berita"),
         window.location.reload()
     )
+    
 }
 
     return(

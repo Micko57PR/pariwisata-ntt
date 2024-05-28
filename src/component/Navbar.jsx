@@ -38,14 +38,14 @@ const Navbar = () => {
 		<center>
   <div class="row text-white">
     <div class="col-sm item-center">
-	<img src="https://i.ibb.co/VQhnd05/ntt-logo.png" height={70}></img>
+	<img src="https://i.ibb.co.com/FqMKrBM/ntt-logo.png" height={70}></img>
     </div>
     <div class="col-lg">
 	<h5 className="fw-bold text-light">DINAS PARIWISATA DAN EKONOMI KREATIF 
 	PROVINSI NUSA TENGGARA TIMUR</h5>
     </div>
     <div class="col-sm">
-    <img src="https://i.ibb.co/rG9D5BW/Capture-removebg-preview.pngg" height={70}></img>
+    <img src="https://i.ibb.co.com/8zJLK9Y/Capture-removebg-preview.png" height={70}></img>
     </div>
   </div>
   </center>
@@ -83,7 +83,7 @@ const Navbar = () => {
         </li>
 
 		<li class="nav-item">
-          <a class="nav-link" href="#">Event</a>
+          <a class="nav-link" href="/event">Event</a>
         </li>
 
 		<li class="nav-item dropdown">
@@ -91,9 +91,8 @@ const Navbar = () => {
            Akomodasi
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Hotel</a></li>
-            <li><a class="dropdown-item" href="#">Kuliner</a></li>
-			<li><a class="dropdown-item" href="#">Oleh-oleh khas NTT</a></li>
+            <li><a class="dropdown-item" href="/hotel-suvenir">Hotel & Souvenir/Toko Oleh-Oleh</a></li>
+            <li><a class="dropdown-item" href="/kulinerNTT">Kuliner</a></li>
           </ul>
         </li>
 

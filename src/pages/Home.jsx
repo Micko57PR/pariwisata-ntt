@@ -25,7 +25,7 @@ export default function Home() {
 			setUtama(filterUtama)
 		})
 		},[])
-	const berita = artikel.slice(0, 3)
+	const berita = artikel.slice(0, 6)
 	return(
 	<>
   

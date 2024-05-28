@@ -41,7 +41,7 @@ axios.get('https://api.sheety.co/ca8c3dbf07a7f25c4580d99a5bb63100/databaseWisata
 
     <Link to={`/wisata/kategori/${'budaya'}`} className="col">
     <div class="card m-2">
-    <img className="rounded card-img-top" src='https://www.indonesia.travel/content/dam/indtravelrevamp/id-id/ide-liburan/3-destinasi-wisata-di-ntt-yang-wajib-masuk-bucket-list/wae-rebo.jpg'/>
+    <img className="rounded card-img-top" src='https://i.ibb.co.com/3MscmYz/5f27bf8eba616.jpg'/>
     <div className="bottom-left fw-bold display-7"
     style={{color:'white'}}>Wisata Budaya</div>
     </div> 
@@ -50,7 +50,7 @@ axios.get('https://api.sheety.co/ca8c3dbf07a7f25c4580d99a5bb63100/databaseWisata
     <Link to={`/wisata/kategori/${'buatan'}`} className="col">
     <div className="col">
     <div class="card m-2">
-    <img className="rounded card-img-top" src='https://i.ibb.co/LPfK0R3/tamnos.jpg' style={{width:'100%'}}/>
+    <img className="rounded card-img-top" src='https://i.ibb.co.com/v4MRTXh/tamnos.jpg' style={{width:'100%'}}/>
     <div className="bottom-left fw-bold display-7"
     style={{color:'white'}}>Wisata Buatan & Bangunan Bersejarah</div>
     </div> 
@@ -59,7 +59,7 @@ axios.get('https://api.sheety.co/ca8c3dbf07a7f25c4580d99a5bb63100/databaseWisata
 
     <div className="col">
     <div class="card m-2 img-thumbnail">
-    <img className="rounded card-img-top" src='https://i.ibb.co/h9bg13c/b-3.jpg' style={{width:'100%'}}/>
+    <img className="rounded card-img-top" src='https://i.ibb.co.com/nnQXkvQ/b-3.jpg' style={{width:'100%'}}/>
     <div className="bottom-left fw-bold display-7"
     style={{color:'white'}}>Event Khusus Wisata</div>
     </div> 

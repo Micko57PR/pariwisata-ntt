@@ -10,7 +10,7 @@ const [allberita, setAllberita] = useState([])
 const [prevberita, setPrevberita] = useState(null)
 const [nextberita, setNextberita] = useState(null)
 
-console.log(berita)
+console.log(berita);
 useEffect(() => {
 axios.get('https://sheetdb.io/api/v1/d7gsiznuemgk2')
 .then(response => {
