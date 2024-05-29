@@ -49,8 +49,10 @@ const Edit = () =>{
             foto:foto,
             tanggal:currDate
         }
-    }).then(
-        navigate("/tambah-berita"),
+    }).then(response => {
+        navigate("/tambah-berita")}).then(data => {
+        console.log(data)})
+        
         window.location.reload()
     )
     
