@@ -18,7 +18,7 @@ export default function WisataPage(){
     const [position, setposition] = useState([])
 
     useEffect(() => {
-    axios.get('https://api.sheety.co/ca8c3dbf07a7f25c4580d99a5bb63100/databaseWisata/sheet1')
+    axios.get('https://api.sheety.co/92569ff1ab8ae34c8cdad7ffbb3f5d1f/databaseWisata/sheet1')
     .then(response => {
     const data = response.data.sheet1
     const datas = Object.values(data)
